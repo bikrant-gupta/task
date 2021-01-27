@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="question correct" matRipple (click)='isAnswerOpened = !isAnswerOpened' [ngClass]='{"correct":isCorrect,"incorrect":isIncorrect}' fxLayout='row'>
+        <div class="question-detail" fxFlex fxLayout='row' fxLayoutAlign='start center'><span>{{questionData.question}}</span></div>
+        <div class="toggle-icon" fxFlex='50px'>
+            <button mat-icon-button >
+                <span *ngIf='!isAnswerOpened' class="material-icons">expand_more</span>
+                <span *ngIf='isAnswerOpened'  class="material-icons">expand_less</span>
+            </button>
+        </div>
+    </div>
+    <div *ngIf='isAnswerOpened'>
+        <div class="answer">
+            {{questionData.answer}}
+        </div>
+        <div class="action" fxLayout='row' fxLayoutAlign='center center'>
+            <div fxFlex  fxLayout='row' fxLayoutAlign='center center'><button mat-icon-button (click)='isCorrect=true;isIncorrect=false;'><span class="material-icons">check</span></button></div>
+            <div fxFlex fxLayout='row' fxLayoutAlign='center center'><button mat-icon-button (click)='isCorrect=false;isIncorrect=true'><span class="material-icons">clear</span></button></div>
+            <div fxFlex fxLayout='row' fxLayoutAlign='center center'><button mat-icon-button (click)='editQuestion()'><span class="material-icons">edit</span></button></div>
+            <div fxFlex fxLayout='row' fxLayoutAlign='center center'><button mat-icon-button (click)='deleteQuestion()'><span class="material-icons">delete</span></button></div>
+        </div>
+    </div>
+</div>

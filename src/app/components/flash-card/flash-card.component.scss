@@ -1,0 +1,42 @@
+.card{
+    width:100%;
+    // max-width: 300px;
+    // border:0.5px solid black;
+    // padding:5px;
+    border-radius: 5px;
+    margin:10px;
+    background-color: white;
+    box-shadow: 0 13px 26px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.question{
+    border-bottom: 0.5px solid #eee;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left: 10px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+.answer{
+    padding:10px;
+}
+
+.action{
+  
+    div{
+        border:0.5px solid #eee;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        color: #02368a;
+    }
+}
+
+.correct{
+    background-color: #00ff00 !important;
+    color:white;
+}
+.incorrect{
+    background-color: #ff2200;
+    color:white;
+}

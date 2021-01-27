@@ -1,0 +1,5 @@
+<div class="row">
+    <div class='wd' *ngFor='let data of questions;let i = index'>
+        <app-flash-card [questionData]='data' (delete)='deleteQuestion(i)' (edit)='updateQuestion(i)'></app-flash-card>
+    </div>
+</div>

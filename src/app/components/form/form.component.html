@@ -1,0 +1,28 @@
+<div class="container form">
+    <div class="head">
+        <span *ngIf='!isEditting'>Add New Flash Card</span>
+        <span *ngIf='isEditting'>Update Flash Card</span>
+        
+    </div>
+    <div>
+        <form [formGroup]='questionFormGroup' (ngSubmit)='onSubmit()'>
+            <div style='margin-bottom: 10px;'>
+               <label>Question</label><br>
+               <input type="text" class='input' matInput formControlName='question'>
+               <div *ngIf='questionFormGroup.get("question").errors && submitted' class="error validation-error">Question is required</div>
+            </div>
+            <div style='margin-bottom: 10px;'>
+                <label>Answer</label><br>
+                <input type="text" class='input' matInput formControlName='answer'>
+                <div *ngIf='questionFormGroup.get("answer").errors && submitted' class="error validation-error">Answer is required</div>
+             </div>
+             <div class="action" fxLayout='row' fxLayoutGap='10px' >
+                 <button mat-stroked-button class='btn'>
+                     <span *ngIf='!isEditting'>Submit</span>
+                     <span *ngIf='isEditting'>Update</span>
+                 </button>
+                 <button mat-stroked-button type='button' class='clear-btn' (click)='clear()'>Clear</button>
+             </div>
+        </form>
+    </div>
+</div>

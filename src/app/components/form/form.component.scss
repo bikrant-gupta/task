@@ -1,0 +1,35 @@
+.btn{
+    background-color:  #98E7D7;
+    color:white;
+}
+.form{
+    width:100%;
+    max-width: 300px;
+    // border:0.5px solid black;
+    padding:20px;
+    border-radius: 5px;
+    margin:25px;
+    background-color: white;
+    box-shadow: 0 13px 26px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.head{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.input{
+    padding:5px;
+    border:0.5px solid #eee;
+    border-radius: 5px;
+    margin-top:4px;
+    width: 100%;
+}
+label{
+    font-weight: 500;
+}
+.error{
+    color:red !important;
+}
+.validation-error{
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
