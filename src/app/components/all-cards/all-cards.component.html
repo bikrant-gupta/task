@@ -1,3 +1,9 @@
+<div class='flash-head'>
+    Your Flash Cards
+</div>
+<div class="warning" *ngIf='!questions.length'>
+    You don't have cards. Add cards to test you self.
+</div>
 <div class="row">
     <div class='wd' *ngFor='let data of questions;let i = index'>
         <app-flash-card [questionData]='data' (delete)='deleteQuestion(i)' (edit)='updateQuestion(i)'></app-flash-card>
